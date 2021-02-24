@@ -2,10 +2,6 @@
   font-family: $font-family;
 }
 
-img {
-  max-width: 100%;
-}
-
 .flex {
   display: flex;
 }
@@ -19,29 +15,27 @@ img {
 }
 
 .book-details {
-  h1 {
-    font-size: 2rem;
+  .title {
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 3.25rem;
   }
   
-  span {
-    font-size: 1.5rem;
+  .genre {
+    font-size: 24px;
     font-weight: 700;
     color: $equalizer-grey
   }
   
-  ul {
-    font-size: 1.25rem;
+  .details {
+    font-size: 20px;
     color: $equalizer-grey;
-  }
-  
-  li {
-    margin-bottom: 2.25rem;
-    strong {
-      color: $equalizer-black;
+
+    .detail {
+      margin-bottom: 2.25rem;
+      strong {
+        color: $equalizer-black;
+      }
     }
   }
 }
-
-
