@@ -2,6 +2,10 @@
   font-family: $font-family;
 }
 
+body {
+  background-color: #F4F4F4;
+}
+
 img {
   max-width: 100%;
 }
@@ -11,7 +15,12 @@ img {
 }
 
 .book-card {
+  width: 75%;
+  max-width: 900px;
+  margin: 5rem auto;
   padding: 1.5rem;
+  background-color: #FFF;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
   img {
     height: 368px;
     margin-right: 3.25rem;
@@ -19,12 +28,23 @@ img {
 }
 
 .book-details {
+  flex-grow: 1;
   h1 {
+    position: relative;
+    width: 100%;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 3.25rem;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: -1rem;
+      left: 0;
+      background-color: #BED23C;
+    }
   }
-  
   span {
     font-size: 1.5rem;
     font-weight: 700;
