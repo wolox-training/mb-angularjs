@@ -1,36 +1,18 @@
-* {
-  font-family: $font-family;
-}
-
-body {
-  background-color: #F4F4F4;
-}
-
-img {
-  max-width: 100%;
-}
-
-.flex {
-  display: flex;
-}
 
 .book-card {
-  width: 75%;
-  max-width: 900px;
   margin: 5rem auto;
   padding: 1.5rem;
-  background-color: #FFF;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
-  
 }
 
 .book-image {
   position: relative;
   flex: 1 0 fit-content;
   margin-right: 3.25rem;
+  
   img {
     max-height: 370px;
   }
+  
   &::after {
     content: "";
     position: absolute;
@@ -48,6 +30,7 @@ img {
 
 .book-details {
   flex-grow: 2;
+  
   h1 {
     position: relative;
     width: 100%;
@@ -64,6 +47,7 @@ img {
       background-color: #BED23C;
     }
   }
+  
   span {
     font-size: 1.5rem;
     font-weight: 700;
