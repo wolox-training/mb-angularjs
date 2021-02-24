@@ -21,14 +21,33 @@ img {
   padding: 1.5rem;
   background-color: #FFF;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+  
+}
+
+.book-image {
+  position: relative;
+  flex: 1 0 fit-content;
+  margin-right: 3.25rem;
   img {
-    height: 368px;
-    margin-right: 3.25rem;
+    max-height: 370px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 115px;
+    top: -1rem;
+    right: -2rem;
+    background-image: url("../assets/img/badge.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(15deg);
   }
 }
 
 .book-details {
-  flex-grow: 1;
+  flex-grow: 2;
   h1 {
     position: relative;
     width: 100%;
