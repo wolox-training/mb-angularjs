@@ -1,13 +1,5 @@
-* {
-  font-family: $font-family;
-}
-
 body {
-  background-color: #F4F4F4;
-}
-
-img {
-  max-width: 100%;
+  background-color: $wild-sand;
 }
 
 .flex {
@@ -21,6 +13,7 @@ img {
   padding: 1.5rem;
   background-color: #FFF;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+
   img {
     height: 368px;
     margin-right: 3.25rem;
@@ -29,12 +22,14 @@ img {
 
 .book-details {
   flex-grow: 1;
-  h1 {
+
+  .title {
     position: relative;
     width: 100%;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 3.25rem;
+
     &::after {
       content: "";
       position: absolute;
@@ -42,26 +37,26 @@ img {
       height: 4px;
       bottom: -1rem;
       left: 0;
-      background-color: #BED23C;
+      background-color: $earls-green;
     }
   }
-  span {
-    font-size: 1.5rem;
+
+  .genre {
+    font-size: 24px;
     font-weight: 700;
     color: $equalizer-grey
   }
   
-  ul {
-    font-size: 1.25rem;
+  .details {
+    font-size: 20px;
     color: $equalizer-grey;
-  }
-  
-  li {
-    margin-bottom: 2.25rem;
-    strong {
-      color: $equalizer-black;
+
+    .detail {
+      margin-bottom: 2.25rem;
+
+      strong {
+        color: $equalizer-black;
+      }
     }
   }
 }
-
-
