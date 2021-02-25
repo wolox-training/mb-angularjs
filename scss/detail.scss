@@ -5,7 +5,7 @@
 .title {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 3.25rem;
+  margin-bottom: 52px;
 }
 
 .genre {
@@ -16,10 +16,12 @@
 
 .details {
   font-size: 20px;
-  color: $equalizer-grey;
   
   .detail {
-    margin-bottom: 2.25rem;
+    display: block;
+    margin-bottom: 36px;
+    color: $equalizer-grey;
+
     strong {
       color: $equalizer-black;
     }
