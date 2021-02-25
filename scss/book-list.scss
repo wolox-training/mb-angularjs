@@ -1,5 +1,6 @@
 body {
   background-color: $wild-sand;
+  padding-top: 70px;
 }
 
 .book-item {
@@ -26,7 +27,7 @@ body {
 }
 
 .book-list {
-  margin-top: 80px;
+  padding: 36px 0;
   justify-content: center;
   flex-wrap: wrap;
   gap: 36px;
