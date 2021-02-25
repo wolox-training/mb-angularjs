@@ -74,3 +74,13 @@ body {
     transform: rotate(15deg);
   }
 }
+
+.btn-back {
+  font-size: 20px;
+
+  &::before {
+    content: url(../assets/img/back-arrow.png);
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+}
