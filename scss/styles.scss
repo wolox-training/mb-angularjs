@@ -5,28 +5,3 @@ $font-family: 'Roboto', sans-serif;
 * {
   font-family: $font-family;
 }
-  
-body {
-  background-color: #F4F4F4;
-}
-  
-img {
-  max-width: 100%;
-}
-  
-.flex {
-  display: flex;
-}
-
-.container {
-  width: 75%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.card {
-  background-color: #FFF;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
-}
-
-  

@@ -9,13 +9,17 @@
   padding: 1.75rem 1.75rem 1.375rem;
   max-width: 198px;
 
+  img {
+    max-height: 200px;
+  }
+
   .book-title {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
   }
 
   .book-author {
-    font-size: 0.875rem;
+    font-size: 14px;
     color: $equalizer-grey
   }
 
