@@ -1,0 +1,29 @@
+* {
+  font-family: $font-family;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 52px;
+}
+
+.genre {
+  font-size: 24px;
+  font-weight: 700;
+  color: $equalizer-grey
+}
+
+.details {
+  font-size: 20px;
+  
+  .detail {
+    display: block;
+    margin-bottom: 36px;
+    color: $equalizer-grey;
+
+    strong {
+      color: $equalizer-black;
+    }
+  }
+}
