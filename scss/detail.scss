@@ -2,28 +2,44 @@
   font-family: $font-family;
 }
 
-.title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 52px;
+.flex {
+  display: flex;
 }
 
-.genre {
-  font-size: 24px;
-  font-weight: 700;
-  color: $equalizer-grey
+.book-card {
+  padding: 1.5rem;
+  img {
+    height: 368px;
+    margin-right: 3.25rem;
+  }
 }
 
-.details {
-  font-size: 20px;
+.book-details {
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 52px;
+  }
   
-  .detail {
-    display: block;
-    margin-bottom: 36px;
-    color: $equalizer-grey;
-
-    strong {
-      color: $equalizer-black;
+  .genre {
+    font-size: 24px;
+    font-weight: 700;
+    color: $equalizer-grey
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    
+    .detail {
+      margin-bottom: 36px;
+      font-size: 20px;
+      color: $equalizer-grey;
+  
+      strong {
+        margin-right: 8px;
+        color: $equalizer-black;
+      }
     }
   }
 }
