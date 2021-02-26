@@ -48,13 +48,16 @@ body {
   }
   
   .details {
-    font-size: 20px;
-    color: $equalizer-grey;
-
+    display: flex;
+    flex-direction: column;
+    
     .detail {
-      margin-bottom: 2.25rem;
-
+      margin-bottom: 36px;
+      font-size: 20px;
+      color: $equalizer-grey;
+  
       strong {
+        margin-right: 8px;
         color: $equalizer-black;
       }
     }
