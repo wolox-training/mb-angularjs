@@ -6,9 +6,62 @@
   width: 80%;
   max-width: 300px;
   margin: 0 auto;
+  padding: 24px;
   background-color: $wild-sand;
+  border-top: 6px solid $cerulean;
+  text-align: center;
 
   .logo {
-    width: 212px
+    width: 212px;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    label {
+      margin-bottom: 8px;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    input {
+      min-height: 32px;
+      padding: 0 8px;
+      border-radius: 5px;
+    }
+  }
+
+  .login-btn {
+    padding: 6px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  
+  .filled-btn {
+    margin-top: 24px;
+    color: #FFF;
+    background-color: $earls-green;
+  }
+  
+  .outlined-btn {
+    color: $earls-green;
+    border: 2px solid $earls-green;
+  }
+
+  .divider {
+    margin: 17px 0;
+    border-style: none;
+    border-top: 2px solid $silver-chalice;
   }
 }

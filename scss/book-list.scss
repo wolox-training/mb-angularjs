@@ -1,5 +1,4 @@
 body {
-  background-color: $wild-sand;
   padding-top: 70px;
 }
 
@@ -7,8 +6,8 @@ body {
   padding: 28px 28px 22px;
   max-width: 198px;
 
-  img {
-    max-height: 200px;
+  .book-cover {
+    width: 142px;
   }
 
   .book-title {

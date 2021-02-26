@@ -14,14 +14,15 @@
     <form action="#" method="POST" class="login-form">
       <section class="login-field">
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder=" " autocomplete="username" required autofocus>
+        <input id="email" name="email" type="email" placeholder=" " autocomplete="username" autofocus>
       </section>
       <section class="login-field">
         <label for="password">Password</label>
-        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <input id="password" name="password" type="password" autocomplete="current-password">
       </section>
-      <button id="signin">Login</button>
-      <button>Sign up</button>
+      <a id="signin" class="login-btn filled-btn" href="/book-list.html">Login</a>
+      <hr class="divider">
+      <a class="login-btn outlined-btn">Sign up</a>
     </form>
   </div>
 </body>
