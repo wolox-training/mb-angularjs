@@ -3,13 +3,13 @@
 }
 
 .login-wrapper {
-  width: 80%;
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 24px;
   background-color: $wild-sand;
   border-top: 6px solid $cerulean;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 24px;
   text-align: center;
+  width: 80%;
 
   .logo {
     width: 212px;
@@ -26,42 +26,42 @@
     margin-top: 16px;
 
     label {
-      margin-bottom: 8px;
       font-size: 16px;
+      margin-bottom: 8px;
       text-align: left;
     }
 
     input {
+      border-radius: 5px;
       min-height: 32px;
       padding: 0 8px;
-      border-radius: 5px;
     }
   }
 
   .login-btn {
-    padding: 6px 16px;
-    font-size: 16px;
     border-radius: 5px;
+    font-size: 16px;
+    padding: 6px 16px;
 
     &:hover {
       opacity: 0.75;
     }
   }
-  
+
   .filled-btn {
-    margin-top: 24px;
-    color: #FFF;
     background-color: $earls-green;
+    color: #FFF;
+    margin-top: 24px;
   }
-  
+
   .outlined-btn {
-    color: $earls-green;
     border: 2px solid $earls-green;
+    color: $earls-green;
   }
 
   .divider {
-    margin: 17px 0;
     border-style: none;
     border-top: 2px solid $silver-chalice;
+    margin: 17px 0;
   }
 }

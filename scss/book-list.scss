@@ -3,8 +3,8 @@ body {
 }
 
 .book-item {
-  padding: 28px 28px 22px;
   max-width: 198px;
+  padding: 28px 28px 22px;
 
   .book-cover {
     width: 142px;
@@ -16,8 +16,8 @@ body {
   }
 
   .book-author {
+    color: $equalizer-grey;
     font-size: 14px;
-    color: $equalizer-grey
   }
 
   > * + * {
@@ -26,8 +26,8 @@ body {
 }
 
 .book-list {
-  padding: 36px 0;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 36px;
+  justify-content: center;
+  padding: 36px 0;
 }
