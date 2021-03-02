@@ -1,5 +1,6 @@
 .login-page {
-  background: #FFF;
+  background: $white;
+  padding: 150px 0;
 }
 
 .login-wrapper {
@@ -16,8 +17,10 @@
   }
 
   .login-form {
+    border-bottom: 2px solid $silver-chalice;
     display: flex;
     flex-direction: column;
+    padding-bottom: 16px;
   }
 
   .login-field {
@@ -25,13 +28,13 @@
     flex-direction: column;
     margin-top: 16px;
 
-    label {
+    .login-label {
       font-size: 16px;
       margin-bottom: 8px;
       text-align: left;
     }
 
-    input {
+    .login-input {
       border-radius: 5px;
       min-height: 32px;
       padding: 0 8px;
@@ -40,8 +43,10 @@
 
   .login-btn {
     border-radius: 5px;
+    border: 2px solid $earls-green;
     font-size: 16px;
     padding: 6px 16px;
+    width: 100%;
 
     &:hover {
       opacity: 0.75;
@@ -50,18 +55,12 @@
 
   .filled-btn {
     background-color: $earls-green;
-    color: #FFF;
+    color: $white;
     margin-top: 24px;
   }
 
   .outlined-btn {
-    border: 2px solid $earls-green;
     color: $earls-green;
-  }
-
-  .divider {
-    border-style: none;
-    border-top: 2px solid $silver-chalice;
-    margin: 17px 0;
+    margin-top: 16px;
   }
 }

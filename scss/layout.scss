@@ -1,12 +1,12 @@
 .card {
-  background-color: #FFF;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+  background-color: $white;
+  box-shadow: 4px 4px 10px $shadow-black;
 }
 
 .container {
   margin: 0 auto;
   max-width: 900px;
-  width: 75%;
+  width: 100%;
 }
 
 .flex {

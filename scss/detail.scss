@@ -1,6 +1,4 @@
 .book-card {
-  background-color: #FFF;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
   margin: 80px auto;
   padding: 24px;
 }
@@ -17,11 +15,11 @@
 
     &::after {
       background-color: $earls-green;
-      bottom: -16px;
-      content: "";
+      content: '';
       height: 4px;
       left: 0;
       position: absolute;
+      top: 52px;
       width: 100%;
     }
   }
@@ -51,21 +49,22 @@
 .book-image {
   margin-right: 52px;
   position: relative;
+  width: 260px;
 
   .book-cover {
-    width: 260px;
+    width: 100%;
   }
 
   &::after {
-    background-image: url("../assets/img/badge.png");
+    background-image: url('../assets/img/badge.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    content: "";
+    bottom: 75%;
+    content: '';
     height: 115px;
+    left: 75%;
     position: absolute;
-    right: -32px;
-    top: -16px;
     transform: rotate(15deg);
     width: 90px;
   }
@@ -73,9 +72,10 @@
 
 .btn-back {
   font-size: 20px;
+  margin-top: 46px;
 
   &::before {
-    content: url(../assets/img/back-arrow.png);
+    content: url('../assets/img/back-arrow.png');
     margin-right: 12px;
     vertical-align: middle;
   }
