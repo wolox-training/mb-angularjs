@@ -1,6 +1,11 @@
 .book-item {
   padding: 28px 28px 22px;
+  transition: transform 0.5s;
   width: 198px;
+
+  &:hover {
+    transform: scale(1.05)
+  }
 
   .book-cover {
     width: 142px;
