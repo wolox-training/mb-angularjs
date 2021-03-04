@@ -1,0 +1,29 @@
+.book-item {
+  padding: 28px 28px 22px;
+  width: 198px;
+
+  .book-cover {
+    width: 142px;
+  }
+
+  .book-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .book-author {
+    color: $equalizer-grey;
+    font-size: 14px;
+  }
+
+  > :not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
+.book-list {
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+  padding: 36px 0;
+}
