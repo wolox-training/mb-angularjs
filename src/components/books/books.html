@@ -1,0 +1,12 @@
+<div class="books-list-container">
+  <div class="search-box">
+    <input type="text" ng-model="searchText" class="search-field" placeholder="Buscá por título o autor del libro...">
+  </div>
+  <div class="container flex book-list">
+    <div class="card book-item" ng-repeat="book in $ctrl.books | searchBook: searchText" ui-sref="book-detail({bookId: book.id})">
+      <img ng-src='{{book.image_url ? book.image_url : $ctrl.bookCover}}' alt="Portada del libro" class="book-cover">
+      <p class="book-title">{{book.title}}</p>
+      <p class="book-author">{{book.author}}</p>
+    </div>
+  </div>
+</div>

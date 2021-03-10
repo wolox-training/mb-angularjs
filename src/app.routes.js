@@ -6,15 +6,27 @@ angular.module('app-bootstrap').config(['$stateProvider', '$urlRouterProvider',
       .state('home', {
         url: '/',
         component: 'centered'
-      }).state('component1',
-      {
-        url: '/component1',
-        component: 'component1'
-      }).state('component2',
-      {
-        url: '/component2',
-        component: 'component2'
-      });
+      })
+      .state('component1',
+        {
+          url: '/component1',
+          component: 'component1'
+        })
+      .state('component2',
+        {
+          url: '/component2',
+          component: 'component2'
+        })
+      .state('books',
+        {
+          url: '/books',
+          component: 'books'
+        })
+      .state('book-detail',
+        {
+          url: '/books/{bookId}',
+          component: 'bookDetail'
+        });
     $urlRouterProvider.otherwise('/');
   }
 ]);

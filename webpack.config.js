@@ -114,7 +114,7 @@ module.exports = {
       emitWarning: true
     })
   ],
-  devtool: 'eval',
+  devtool: 'eval-cheap-source-map',
   optimization: {
     splitChunks: {
       chunks: 'async'
