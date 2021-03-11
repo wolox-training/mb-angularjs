@@ -87,12 +87,25 @@ $breakpoint-tablet: 1200px;
     width: 100%;
   }
 
+  @keyframes stamp {
+    0% {
+      opacity: 0;
+      transform-origin: 100% 100%;
+      transform: rotate(2deg) scale(5);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotate(15deg) scale(1);
+    }
+  }
+
   .book-badge {
-    /* animation-fill-mode: forwards;
-    animation: stamp 1s 1s; */
+    animation: 1s ease-in 1s both stamp;
     bottom: 75%;
     left: 75%;
     position: absolute;
+    opacity: 0;
     transform: rotate(15deg) scale(1);
     width: $badge-width;
   }
@@ -191,18 +204,3 @@ $breakpoint-tablet: 1200px;
     order: 0;
   }
 }
-/* @keyframes stamp {
-  0% {
-    opacity: 0;
-    transform-origin: 100% 100%;
-    transform: rotate(2deg) scale(5);
-  }
-  10% {
-    opacity: 0.5;
-    transition: all .3s;
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(15deg) scale(1);
-  }
-} */
