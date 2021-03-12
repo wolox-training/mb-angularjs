@@ -11,7 +11,7 @@ angular.module('app-bootstrap')
     }]
   })
   .filter('searchBook', function() {
-    return function(items, searchText) {
-      return items.filter(item => searchText ? item.title.toLowerCase().includes(searchText.toLowerCase()) || item.author.toLowerCase().includes(searchText.toLowerCase()) : true);
+    return (items, searchText) =>
+      items.filter(item => searchText ? item.title.toLowerCase().includes(searchText.toLowerCase()) || item.author.toLowerCase().includes(searchText.toLowerCase()) : true);
     };
   });
