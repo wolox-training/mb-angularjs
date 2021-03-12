@@ -1,0 +1,16 @@
+<div class="container flex detail-container">
+  <div class="card book-card">
+    <div class="book-image">
+      <img ng-src="{{ $ctrl.book.image_url ? $ctrl.book.image_url : $ctrl.bookCover }}" alt="Portada del Libro" class="book-cover">
+      <img ng-src="{{ $ctrl.badge }}" alt="" class="book-badge">
+    </div>
+    <h1 class="detail-title">{{ $ctrl.book.title }}</h1>
+    <p class="genre">({{ $ctrl.book.genre }})</p>
+    <div class="details">
+      <p class="detail"><strong>Autor del libro:</strong> {{ $ctrl.book.author }}</p>
+      <p class="detail"><strong>Editorial:</strong> {{ $ctrl.book.publisher }}</p>
+      <p class="detail"><strong>Año de publicación:</strong> {{ $ctrl.book.year }}</p>
+    </div>
+  </div>
+  <a ui-sref="books" class="button-back">Atrás</a>
+</div>

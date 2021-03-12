@@ -1,0 +1,94 @@
+.books-list-container {
+  background-color: $wild-sand;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: $white;
+  box-shadow: 4px 4px 10px $shadow-black;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.book-item {
+  padding: 28px 28px 22px;
+  transition: transform 0.5s;
+  width: 198px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .book-cover {
+    height: 200px;
+    object-fit: cover;
+    width: 142px;
+  }
+
+  .book-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .book-author {
+    color: $equalizer-grey;
+    font-size: 14px;
+  }
+
+  > :not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
+.book-list {
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+  padding: 36px 0;
+}
+
+.search-wrapper {
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+  width: 600px;
+
+  &::after {
+    background: url('./../assets/img/search-icon.png') no-repeat center;
+    background-size: contain;
+    content: '';
+    height: 36px;
+    opacity: 0.5;
+    position: absolute;
+    right: 12px;
+    top: 32px;
+    width: 36px;
+  }
+}
+
+.search-field {
+  border-radius: 5px;
+  border: 2px solid rgba($equalizer-grey, 0.3);
+  caret-color: $wolox-blue;
+  color: $equalizer-black;
+  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+
+  &::placeholder {
+    color: $equalizer-black;
+    font-size: 20px;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
