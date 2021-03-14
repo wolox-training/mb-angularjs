@@ -5,8 +5,8 @@
 
 .login-wrapper {
   background-color: $wild-sand;
-  border-top: 6px solid $cerulean;
-  margin: 0 auto;
+  border-top: 6px solid $wolox-blue;
+  margin: 50px auto;
   max-width: 300px;
   padding: 24px;
   text-align: center;
@@ -43,7 +43,7 @@
 
   .login-button {
     border-radius: 5px;
-    border: 2px solid $earls-green;
+    border: 2px solid $wolox-green;
     font-size: 16px;
     padding: 6px 16px;
     width: 100%;
@@ -54,13 +54,13 @@
   }
 
   .filled-button {
-    background-color: $earls-green;
+    background-color: $wolox-green;
     color: $white;
     margin-top: 24px;
   }
 
   .outlined-button {
-    color: $earls-green;
+    color: $wolox-green;
     margin-top: 16px;
   }
 }
