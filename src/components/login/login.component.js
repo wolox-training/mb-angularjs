@@ -7,5 +7,10 @@ angular.module('app-bootstrap')
     template: require('./login.html'),
     controller: [function() {
       this.woloxLogo = woloxLogo;
+      this.emailValidation = /^(?!.*\.\.)[^.][^\s@]+[^.]@[^\-][^\s@]+\.[^\s@]{2,}$/;
+
+      this.formSubmit = function() {
+        alert('form submitted');
+      };
     }]
   });
