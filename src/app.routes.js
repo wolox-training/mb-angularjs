@@ -8,6 +8,11 @@ angular.module('app-bootstrap').config(['$stateProvider', '$urlRouterProvider',
           url: '/login',
           component: 'login'
         })
+      .state('signup',
+        {
+          url: '/signup',
+          component: 'signup'
+        })
       .state('books',
         {
           url: '/books',
