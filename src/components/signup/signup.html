@@ -3,30 +3,30 @@
   <form novalidate name="signupForm" class="form-body" ng-submit="signupForm.$valid && $ctrl.formSubmit()">
     <section class="form-field">
       <label for="first-name" class="form-label">Nombre</label>
-      <input id="first-name" name="userFirstName" type="text" class="form-input" ng-model="user.firstName" required>
-      <div ng-show="signupForm.$submitted">
+      <input id="first-name" name="userFirstName" type="text" class="form-input" ng-model="user.firstName" ng-blur="stillError=''" required>
+      <div ng-show="signupForm.$submitted" ng-class="stillError">
         <p class="error-msg" ng-show="signupForm.userFirstName.$error.required">Por favor ingresá tu nombre.</p>
       </div>
     </section>
     <section class="form-field">
       <label for="last-name" class="form-label">Apellido</label>
-      <input id="last-name" name="userLastName" type="text" class="form-input" ng-model="user.lastName" required>
-      <div ng-show="signupForm.$submitted">
+      <input id="last-name" name="userLastName" type="text" class="form-input" ng-model="user.lastName" ng-blur="stillError=''" required>
+      <div ng-show="signupForm.$submitted" ng-class="stillError">
         <p class="error-msg" ng-show="signupForm.userLastName.$error.required">Por favor ingresá tu apellido.</p>
       </div>
     </section>
     <section class="form-field">
       <label for="email" class="form-label">Email</label>
-      <input id="email" name="userEmail" type="text" class="form-input" ng-model="user.email" ng-pattern="$ctrl.emailValidation" required>
-      <div>
+      <input id="email" name="userEmail" type="text" class="form-input" ng-model="user.email" ng-pattern="$ctrl.emailValidation" ng-blur="stillError=''" required>
+      <div ng-class="stillError">
         <p class="error-msg" ng-show="signupForm.$submitted && signupForm.userEmail.$error.required">Por favor ingresá tu email.</p>
         <p class="error-msg" ng-show="signupForm.userEmail.$touched && signupForm.userEmail.$error.pattern">Por favor ingresá un email válido.</p>
       </div>
     </section>
     <section class="form-field">
       <label for="password" class="form-label">Password</label>
-      <input id="password" name="userPassword" type="password" class="form-input" ng-model="user.password" ng-minlength="8" ng-maxlength="52" ng-pattern="$ctrl.passwordValidation" required>
-      <div>
+      <input id="password" name="userPassword" type="password" class="form-input" ng-model="user.password" ng-minlength="8" ng-maxlength="52" ng-pattern="$ctrl.passwordValidation" ng-blur="stillError=''" required>
+      <div ng-class="stillError">
         <p class="error-msg" ng-show="signupForm.$submitted && signupForm.userPassword.$error.required">Por favor ingresá una contraseña.</p>
         <p class="error-msg" ng-show="signupForm.userPassword.$error.minlength">Tu contraseña debe tener al menos 8 caractéres.</p>
         <p class="error-msg" ng-show="signupForm.userPassword.$error.maxlength">Tu contraseña debe tener menos de 52 caractéres.</p>
@@ -35,12 +35,12 @@
     </section>
     <section class="form-field">
       <label for="password" class="form-label">Confirmación de Password</label>
-      <input id="confirmPassword" name="confirmPassword" type="password" class="form-input" ng-model="user.confirmPassword" compare-to="user.password" required>
-      <div ng-show="signupForm.$submitted || signupForm.userPassword.$touched">
+      <input id="confirmPassword" name="confirmPassword" type="password" class="form-input" ng-model="user.confirmPassword" compare-to="user.password" ng-blur="stillError=''" required>
+      <div ng-show="signupForm.$submitted || signupForm.userPassword.$touched" ng-class="stillError">
         <p class="error-msg" ng-show="signupForm.confirmPassword.$invalid">La contraseña no coincide.</p>
       </div>
     </section>
-    <button type="submit" class="form-button filled-button">Sign Up</button>
+    <button type="submit" class="form-button filled-button" ng-click="stillError='error-msg-shake'">Sign Up</button>
   </form>
   <a class="form-button outlined-button" ui-sref="login">Login</a>
 </div>
