@@ -1,9 +1,4 @@
-.login-page {
-  background: $white;
-  padding: 150px 0;
-}
-
-.login-wrapper {
+.form-wrapper {
   background-color: $wild-sand;
   border-top: 6px solid $wolox-blue;
   margin: 50px auto;
@@ -16,25 +11,25 @@
     width: 212px;
   }
 
-  .login-form {
+  .form-body {
     border-bottom: 2px solid $silver-chalice;
     display: flex;
     flex-direction: column;
     padding-bottom: 16px;
   }
 
-  .login-field {
+  .form-field {
     display: flex;
     flex-direction: column;
     margin-top: 16px;
 
-    .login-label {
+    .form-label {
       font-size: 16px;
       margin-bottom: 8px;
       text-align: left;
     }
 
-    .login-input {
+    .form-input {
       border-radius: 5px;
       min-height: 32px;
       padding: 0 8px;
@@ -46,7 +41,7 @@
     }
   }
 
-  .login-button {
+  .form-button {
     border-radius: 5px;
     border: 2px solid $wolox-green;
     font-size: 16px;

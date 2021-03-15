@@ -1,23 +1,23 @@
-<div class="login-wrapper">
+<div class="form-wrapper">
   <img ng-src="{{$ctrl.woloxLogo}}" alt="Wolox Logo" class="logo">
-  <form novalidate name="loginForm" class="login-form" ng-submit="loginForm.$valid && $ctrl.formSubmit()">
-    <section class="login-field">
-      <label for="email" class="login-label">Email</label>
-      <input id="email" name="userEmail" type="text" class="login-input" ng-model="$ctrl.user.email" ng-pattern="$ctrl.emailValidation" required>
+  <form novalidate name="loginForm" class="form-body" ng-submit="loginForm.$valid && $ctrl.formSubmit()">
+    <section class="form-field">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" name="userEmail" type="text" class="form-input" ng-model="$ctrl.user.email" ng-pattern="$ctrl.emailValidation" required>
       <div ng-show="loginForm.$submitted || loginForm.userEmail.$touched">
         <p class="error-msg" ng-show="loginForm.$submitted && loginForm.userEmail.$error.required">Por favor ingresá tu email.</p>
         <p class="error-msg" ng-show="loginForm.userEmail.$error.pattern">Por favor ingresá un email válido.</p>
       </div>
     </section>
-    <section class="login-field">
-      <label for="password" class="login-label">Password</label>
-      <input id="password" name="userPassword" type="password" class="login-input" ng-model="$ctrl.user.password" required>
+    <section class="form-field">
+      <label for="password" class="form-label">Password</label>
+      <input id="password" name="userPassword" type="password" class="form-input" ng-model="$ctrl.user.password" required>
       <div ng-show="loginForm.$submitted || loginForm.userPassword.$touched">
         <p class="error-msg" ng-show="loginForm.$submitted && loginForm.userPassword.$error.required">Por favor ingresá una contraseña.</p>
         <p class="error-msg" ng-show="loginForm.userPassword.$error.password">Por favor ingresá una contraseña válida.</p>
       </div>
     </section>
-    <button type="submit" class="login-button filled-button">Login</button>
+    <button type="submit" class="form-button filled-button">Login</button>
   </form>
-  <a class="login-button outlined-button" ui-sref="signup">Sign up</a>
+  <a class="form-button outlined-button" ui-sref="signup">Sign up</a>
 </div>
