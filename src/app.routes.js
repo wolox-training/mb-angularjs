@@ -27,11 +27,18 @@ angular.module('app-bootstrap').config(['$stateProvider', '$urlRouterProvider',
   }
 ]);
 
-angular.module('app-bootstrap').run(['$transitions',
-  function ($transitions) {
-    $transitions.onBefore({ from: 'home' }, transition => {
-      // eslint-disable-next-line no-console
-      console.log('Route changed, use ransition.abort(); for abort if you need', transition);
-    });
-  }
-]);
+angular.module('app-bootstrap')
+  .run(['$transitions', 'localStorageService', '$state',
+    function ($transitions, localStorageService, $state) {
+      $transitions.onStart({ to: (state) => state.name !== 'signup' }, function() {
+        if (!localStorageService.get('accessToken')) {
+          $state.go('login');
+        }
+      });
+      $transitions.onStart({ to: ['login', 'signup'] }, function() {
+        if (localStorageService.get('accessToken')) {
+          $state.go('books');
+        }
+      });
+    }
+  ]);
