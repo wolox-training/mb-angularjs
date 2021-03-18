@@ -1,12 +1,7 @@
-.login-page {
-  background: $white;
-  padding: 150px 0;
-}
-
-.login-wrapper {
+.form-wrapper {
   background-color: $wild-sand;
-  border-top: 6px solid $cerulean;
-  margin: 0 auto;
+  border-top: 6px solid $wolox-blue;
+  margin: 50px auto;
   max-width: 300px;
   padding: 24px;
   text-align: center;
@@ -16,34 +11,43 @@
     width: 212px;
   }
 
-  .login-form {
+  .form-body {
     border-bottom: 2px solid $silver-chalice;
     display: flex;
     flex-direction: column;
     padding-bottom: 16px;
   }
 
-  .login-field {
+  .form-field {
     display: flex;
     flex-direction: column;
     margin-top: 16px;
 
-    .login-label {
+    .form-label {
       font-size: 16px;
       margin-bottom: 8px;
       text-align: left;
     }
 
-    .login-input {
+    .form-input {
       border-radius: 5px;
       min-height: 32px;
       padding: 0 8px;
     }
+
+    .error-msg {
+      color: $error-red;
+      margin-top: 8px;
+    }
+
+    .error-msg-shake {
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+    }
   }
 
-  .login-button {
+  .form-button {
     border-radius: 5px;
-    border: 2px solid $earls-green;
+    border: 2px solid $wolox-green;
     font-size: 16px;
     padding: 6px 16px;
     width: 100%;
@@ -54,13 +58,13 @@
   }
 
   .filled-button {
-    background-color: $earls-green;
+    background-color: $wolox-green;
     color: $white;
     margin-top: 24px;
   }
 
   .outlined-button {
-    color: $earls-green;
+    color: $wolox-green;
     margin-top: 16px;
   }
 }

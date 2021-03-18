@@ -4,11 +4,9 @@
 
 @import 'base';
 
-@import '../components/centered/centered';
+@import 'commons/animations';
 
-@import '../components/component1/component1';
-
-@import '../components/component2/component2';
+@import 'commons/forms';
 
 @import '../components/books/books';
 

@@ -1,0 +1,23 @@
+<div class="form-wrapper">
+  <img ng-src="{{$ctrl.woloxLogo}}" alt="Wolox Logo" class="logo">
+  <form novalidate name="loginForm" class="form-body" ng-submit="loginForm.$valid && $ctrl.formSubmit()">
+    <section class="form-field">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" name="userEmail" type="text" class="form-input" ng-model="$ctrl.user.email" ng-pattern="$ctrl.emailValidation" ng-blur="stillError=''" required>
+      <div ng-show="loginForm.$submitted || loginForm.userEmail.$touched" ng-class="stillError">
+        <p class="error-msg" ng-show="loginForm.$submitted && loginForm.userEmail.$error.required">Por favor ingresá tu email.</p>
+        <p class="error-msg" ng-show="loginForm.userEmail.$error.pattern">Por favor ingresá un email válido.</p>
+      </div>
+    </section>
+    <section class="form-field">
+      <label for="password" class="form-label">Password</label>
+      <input id="password" name="userPassword" type="password" class="form-input" ng-model="$ctrl.user.password" ng-blur="stillError=''" required>
+      <div ng-show="loginForm.$submitted || loginForm.userPassword.$touched" ng-class="stillError">
+        <p class="error-msg" ng-show="loginForm.$submitted && loginForm.userPassword.$error.required">Por favor ingresá una contraseña.</p>
+        <p class="error-msg" ng-show="loginForm.userPassword.$error.password">Por favor ingresá una contraseña válida.</p>
+      </div>
+    </section>
+    <button type="submit" class="form-button filled-button" ng-click="stillError='error-msg-shake'">Login</button>
+  </form>
+  <a class="form-button outlined-button" ui-sref="signup">Sign up</a>
+</div>

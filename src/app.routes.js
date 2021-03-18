@@ -3,19 +3,15 @@ const angular = require('angular');
 angular.module('app-bootstrap').config(['$stateProvider', '$urlRouterProvider',
   function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
-        url: '/',
-        component: 'centered'
-      })
-      .state('component1',
+      .state('login',
         {
-          url: '/component1',
-          component: 'component1'
+          url: '/login',
+          component: 'login'
         })
-      .state('component2',
+      .state('signup',
         {
-          url: '/component2',
-          component: 'component2'
+          url: '/signup',
+          component: 'signup'
         })
       .state('books',
         {
@@ -27,7 +23,7 @@ angular.module('app-bootstrap').config(['$stateProvider', '$urlRouterProvider',
           url: '/books/{bookId}',
           component: 'bookDetail'
         });
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
   }
 ]);
 
