@@ -14,6 +14,10 @@ angular.module('app-bootstrap')
               // eslint-disable-next-line no-console
               console.log(response.status);
             });
+        },
+        logout: () => {
+          localStorageService.clearAll();
+          $state.go('login');
         }
       };
     }
