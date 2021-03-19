@@ -6,11 +6,9 @@ angular.module('app-bootstrap')
       require: 'ngModel',
       link: function(scope, element, attrs, ctrl) {
 
-        ctrl.$validators.compareTo = function(val) {
-          return val === scope.$eval(attrs.compareTo);
-        };
+        ctrl.$validators.compareTo = (val) => val === scope.$eval(attrs.compareTo);
 
-        scope.$watch(attrs.compareTo, function() {
+        scope.$watch(attrs.compareTo, () => {
           ctrl.$validate();
         });
       }
