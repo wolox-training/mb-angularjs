@@ -10,6 +10,9 @@ angular.module('app-bootstrap')
       let bookId = parseInt($stateParams.bookId);
       this.bookCover = bookCover;
       this.badge = badge;
-      this.book = booksService.getBook(bookId);
+      this.book = {};
+      booksService.getBook(bookId).then((response) => {
+        this.book = response.data;
+      });
     }]
   });

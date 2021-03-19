@@ -4,23 +4,27 @@ angular.module('app-bootstrap')
   .factory('booksService', ['$http', 'localStorageService',
     function($http, localStorageService) {
 
-      let accesToken = localStorageService.get('accessToken');
-      let client = localStorageService.get('client');
-      let uid = localStorageService.get('uid');
-      const booksList = $http.get('https://books-training-rails.herokuapp.com/api/v1/books?', {
-        headers: {
-          'access-token': accesToken,
-          'client': client,
-          'uid': uid
-        }
-      }).then(function(response) {
-          let books = response.data.page;
-          return books;
-        });
+      const booksURL = process.env.API_URL + '/books?';
+      const bookURL = process.env.API_URL + '/books/';
+      const accesToken = localStorageService.get('accessToken');
+      const client = localStorageService.get('client');
+      const uid = localStorageService.get('uid');
 
       return {
-        getBooksList: () => booksList,
-        getBook: (bookId) => booksList.find(({ id }) => id === bookId)
+        getBooksList: () => $http.get(booksURL, {
+          headers: {
+            'access-token': accesToken,
+            client: client,
+            uid: uid
+          }
+        }),
+        getBook: (bookId) => $http.get(bookURL + `${bookId}`, {
+          headers: {
+            'access-token': accesToken,
+            client: client,
+            uid: uid
+          }
+        })
       };
     }
   ]);
