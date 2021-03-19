@@ -1,4 +1,4 @@
-import woloxLogo from './../assets/img/LogoWolox.png';
+import woloxLogo from './../../assets/img/LogoWolox.png';
 
 const angular = require('angular');
 
@@ -8,7 +8,7 @@ angular.module('app-bootstrap')
       restrict: 'E',
       replace: true,
       scope: true,
-      template: require('./../components/navbar/navbar.html'),
+      template: require('./navbar.html'),
       controller: ['authService', function(authService) {
         this.woloxLogo = woloxLogo;
         this.logout = function() {
