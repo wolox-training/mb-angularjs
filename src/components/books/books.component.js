@@ -7,7 +7,10 @@ angular.module('app-bootstrap')
     template: require('./books.html'),
     controller: ['booksService', function (booksService) {
       this.bookCover = bookCover;
-      this.books = booksService.getBooksList();
+      this.books = [];
+      booksService.getBooksList().then((response) => {
+        this.books = response.data.page;
+      });
     }]
   })
   .filter('searchBook', function() {

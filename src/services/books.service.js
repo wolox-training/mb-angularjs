@@ -1,15 +1,30 @@
 const angular = require('angular');
-const booksData = require('./../data/books.json');
 
 angular.module('app-bootstrap')
-  .factory('booksService', [
-    function() {
+  .factory('booksService', ['$http', 'localStorageService',
+    function($http, localStorageService) {
 
-      const booksList = booksData;
+      const booksURL = process.env.API_URL + '/books?';
+      const bookURL = process.env.API_URL + '/books/';
+      const accesToken = localStorageService.get('accessToken');
+      const client = localStorageService.get('client');
+      const uid = localStorageService.get('uid');
 
       return {
-        getBooksList: () => booksList,
-        getBook: (bookId) => booksList.find(({ id }) => id === bookId)
+        getBooksList: () => $http.get(booksURL, {
+          headers: {
+            'access-token': accesToken,
+            client: client,
+            uid: uid
+          }
+        }),
+        getBook: (bookId) => $http.get(bookURL + `${bookId}`, {
+          headers: {
+            'access-token': accesToken,
+            client: client,
+            uid: uid
+          }
+        })
       };
     }
   ]);
