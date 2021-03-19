@@ -4,7 +4,11 @@
 
 @import 'base';
 
-@import 'forms';
+@import 'commons/animations';
+
+@import 'commons/forms';
+
+@import '../directives/navbar/navbar';
 
 @import '../components/navbar/navbar';
 
